@@ -33,6 +33,7 @@ PNG23D_OBJ=png23d.o option.o bitmap.o mesh.o mesh_gen.o mesh_index.o mesh_simpli
 all:png23d
 
 png23d:$(PNG23D_OBJ)
+	${CC} -o $@ $^ $(LDFLAGS)
 
 -include $(PNG23D_OBJ:.o=.d)
 
